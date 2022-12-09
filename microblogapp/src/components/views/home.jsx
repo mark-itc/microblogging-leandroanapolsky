@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import TweetList from "./tweetList";
-import Input from "./input";
-import { getTweetsFromApi } from "../APIs/apis";
+import TweetList from "../tweetList";
+import Input from "../input";
+import { getTweetsFromApi } from "../../APIs/apis";
 
 function Home() {
   const [loading, setLoading] = useState(true);

@@ -5,15 +5,14 @@ import TweetList from "./components/tweetList";
 import Input from "./components/input";
 import Navbar from "./components/navbar";
 import Tweet from "./components/tweet";
-import Home from "./components/home";
-import Userpage from "./components/userpage";
+import Home from "./components/views/home";
+import Userpage from "./components/views/userpage";
 
 function App() {
   return (
     <div className="App">
-      
       <BrowserRouter>
-      <Navbar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/userpage" element={<Userpage />} />
