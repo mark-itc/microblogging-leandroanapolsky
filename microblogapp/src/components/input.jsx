@@ -9,14 +9,13 @@ function Input(props) {
   const [tweetValue, setTweetValue] = useState("What you have in mind...");
 
   const writeTweet = (e) => {
-    setTweetValue(e.target.value);
-    
+
+    setTweetValue(
+      e.target.value
+      );
   };
 
-  // const twitear = () => {
-  //   console.log(tweetValue);
-    
-  // };
+  
 
   return (
     <div className="input-container">
@@ -28,7 +27,8 @@ function Input(props) {
       />
       <div className="under-input">
         {tweetValue.length > 140 ? <Error /> : null}
-        <button className="button" onClick={(tweetValue) => twitear(tweetValue)}>
+        <button className="button" onClick={() => twitear(tweetValue)}>
+        
           Tweet
         </button>
       </div>
