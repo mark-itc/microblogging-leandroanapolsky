@@ -11,13 +11,11 @@ import Userpage from "./components/views/userpage";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/userpage" element={<Userpage />} />
-        </Routes>
-      </BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/userpage" element={<Userpage />} />
+      </Routes>
     </div>
   );
 }

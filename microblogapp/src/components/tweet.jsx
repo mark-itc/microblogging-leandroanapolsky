@@ -12,9 +12,7 @@ function Tweet(props) {
         <div className="tweet-info">{fullTweet.date}</div>
       </div>
 
-      <div className="tweet-content">
-        {fullTweet.content}
-      </div>
+      <div className="tweet-content">{fullTweet.content}</div>
     </div>
   );
 }

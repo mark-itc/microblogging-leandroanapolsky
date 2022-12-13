@@ -1,21 +1,14 @@
-import Tweet from './tweet'
-import './tweetList.css'
+import Tweet from "./tweet";
+import "./tweetList.css";
 
-const TweetList = ({tweets}) => {
+const TweetList = ({ tweets }) => {
+  return (
+    <div className="tweets-container">
+      {tweets.map((item, index) => {
+        return <Tweet key={index} fullTweet={item} />;
+      })}
+    </div>
+  );
+};
 
-    
-
-return (<div className='tweets-container'>
-{tweets.map((item, index)=>{
-    return (
-
-    <Tweet key = {index} fullTweet={item}/>
-      
-    )
-  })}
-</div>)
-
-}
-
-export default TweetList
-
+export default TweetList;
