@@ -5,7 +5,7 @@ import { getTweetsFromApi } from "../../APIs/apis";
 import { tweetContext } from "../tweetsContext";
 
 function Home() {
-  const { tweets, setTweets, twitear, sendTweet } = useContext(tweetContext);
+  const { tweets, setTweets, twitear } = useContext(tweetContext);
 
   const [loading, setLoading] = useState(true);
 
