@@ -5,14 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import TweetContextProvider from "./components/tweetsContext";
+import TestContextProvider from "./components/testContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <TweetContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </TweetContextProvider>
+  <TestContextProvider>
+    <TweetContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </TweetContextProvider>
+  </TestContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

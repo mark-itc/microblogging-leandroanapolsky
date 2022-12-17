@@ -4,15 +4,10 @@ import { createContext, useState } from "react";
 export const tweetContext = createContext();
 
 export default function TweetContentProvider({ children }) {
-  const localTweet = (newLocalTweet) => {
-    localStorage.setItem("localTweetStorage", JSON.stringify(newLocalTweet));
-  };
-
   const [tweets, setTweets] = useState([]);
 
   const twitear = (tweetValue) => {
     const date = new Date();
-    console.log(tweetValue);
 
     const inTweet = {
       content: tweetValue,

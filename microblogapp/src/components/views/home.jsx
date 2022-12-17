@@ -4,6 +4,7 @@ import Input from "../input";
 import { getTweetsFromApi } from "../../APIs/apis";
 import { tweetContext } from "../tweetsContext";
 
+
 function Home() {
   const { tweets, setTweets, twitear } = useContext(tweetContext);
 
@@ -17,15 +18,15 @@ function Home() {
   };
 
   useEffect(() => {
+    callTweetStorage();
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       callTweetStorage();
     }, 8000);
     return () => clearInterval(interval);
   });
-
-  useEffect(() => {
-    callTweetStorage();
-  }, []);
 
   if (loading) return <div>loading...</div>;
 
